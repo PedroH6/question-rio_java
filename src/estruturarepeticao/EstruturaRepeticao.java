@@ -1,9 +1,22 @@
 package estruturarepeticao;
 
+import java.util.Scanner;
+
 public class EstruturaRepeticao {
     public  static void main(String[] args) {
-        forCrencente();
-        forDescrencente();
+        System.out.println("Se você deseja ver o for crescente, digite 1:\nSe deseja ver o for decrencente, digite 2: ");
+
+        Scanner sc = new Scanner(System.in);
+        int decisao = sc.nextInt();
+
+        if (decisao == 1){
+            forCrencente();
+        } else if (decisao == 2) {
+            forDescrencente();
+        } else {
+            System.out.println("Decição inválida: \n");
+        }
+
     }
 
     public static void forCrencente(){
